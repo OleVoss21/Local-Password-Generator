@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PassGen</title>
+    <script src="index.js" defer></script> 
+  </head>
+  <body>
+
+    <section class="section">
+      <div class="tile is-ancestor">
+        <div class="tile is-parent">
+          <div class="tile is-child box">
+            <p class="title">Password Generator</p>
+            <div class="container mb-2">
+              <input class="input" type="text" placeholder="Website URL" id="website">
+            </div>
+            <div class="container mb-2">
+              <input class="input" type="password" placeholder="Master Key" id="key">
+            </div>
+            <div class="container mb-5">
+              <input class="input" type="text" placeholder="Password Length" id="length">
+            </div>
+            <div class="container">
+              <button class="button is-primary" id="generate">Generate</button>
+            </div>
+          </div>
+        </div>
+        <div class="tile is-4 is-vertical is-parent">
+          <div class="tile is-child box">
+            <p class="title is-size-4">Generated password:</p>
+            <p id="passwordField">Your password will appear here.</p>
+          </div>
+          <div class="tile is-child box">
+            <p class="title is-size-4">Password strength:</p>
+            <div class="columns">
+              <div class="column mr-3">
+                <p class="title is-size-6 mb-2">Score:</p>
+                <progress class="progress is-danger" id="passwordScoreBar" value="0" max="4"></progress>
+              </div>
+              <div class="column ml-3">
+                <p class="title is-size-6 mb-1">Time to crack:</p>
+                <p id="timeToCrack"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </body>
+</html>
