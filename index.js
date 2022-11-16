@@ -1,4 +1,6 @@
 import 'bulma/css/bulma.css';
+import './node_modules/bulma-tooltip/dist/css/bulma-tooltip.min.css';
+import 'material-icons/iconfont/material-icons.css';
 import sha256 from './node_modules/js-sha256';
 import zxcvbn from './node_modules/zxcvbn';
 
@@ -12,6 +14,7 @@ function generate(){
     var passwordField = document.getElementById("passwordField");
     var timeToCrackField = document.getElementById("timeToCrack");
     var passwordScoreBar = document.getElementById("passwordScoreBar");
+    var passwordScoreBarDiv = document.getElementById("passwordScoreBarDiv");
 
     var result = sha256.hmac(website, key);
     var resultFormatted = result.slice(0, length);
@@ -19,6 +22,7 @@ function generate(){
     
     passwordField.innerHTML = resultFormatted
     passwordScoreBar.value = data.score;
+    passwordScoreBarDiv.setAttribute('data-tooltip', data.score + '/4');
     if (data.score == 1){
         passwordScoreBar.className = "progress is-danger";
     }

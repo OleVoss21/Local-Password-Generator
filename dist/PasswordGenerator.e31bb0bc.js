@@ -174,7 +174,19 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/process/browser.js":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/bulma-tooltip/dist/css/bulma-tooltip.min.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/material-icons/iconfont/material-icons.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"./material-icons.woff2":[["material-icons.c867cf04.woff2","node_modules/material-icons/iconfont/material-icons.woff2"],"node_modules/material-icons/iconfont/material-icons.woff2"],"./material-icons.woff":[["material-icons.4da117d9.woff","node_modules/material-icons/iconfont/material-icons.woff"],"node_modules/material-icons/iconfont/material-icons.woff"],"./material-icons-outlined.woff2":[["material-icons-outlined.a0cf897c.woff2","node_modules/material-icons/iconfont/material-icons-outlined.woff2"],"node_modules/material-icons/iconfont/material-icons-outlined.woff2"],"./material-icons-outlined.woff":[["material-icons-outlined.ac685101.woff","node_modules/material-icons/iconfont/material-icons-outlined.woff"],"node_modules/material-icons/iconfont/material-icons-outlined.woff"],"./material-icons-round.woff2":[["material-icons-round.b8b43a3c.woff2","node_modules/material-icons/iconfont/material-icons-round.woff2"],"node_modules/material-icons/iconfont/material-icons-round.woff2"],"./material-icons-round.woff":[["material-icons-round.73fe314a.woff","node_modules/material-icons/iconfont/material-icons-round.woff"],"node_modules/material-icons/iconfont/material-icons-round.woff"],"./material-icons-sharp.woff2":[["material-icons-sharp.6d3670ed.woff2","node_modules/material-icons/iconfont/material-icons-sharp.woff2"],"node_modules/material-icons/iconfont/material-icons-sharp.woff2"],"./material-icons-sharp.woff":[["material-icons-sharp.e90c280d.woff","node_modules/material-icons/iconfont/material-icons-sharp.woff"],"node_modules/material-icons/iconfont/material-icons-sharp.woff"],"./material-icons-two-tone.woff2":[["material-icons-two-tone.912699e3.woff2","node_modules/material-icons/iconfont/material-icons-two-tone.woff2"],"node_modules/material-icons/iconfont/material-icons-two-tone.woff2"],"./material-icons-two-tone.woff":[["material-icons-two-tone.ad1e90d3.woff","node_modules/material-icons/iconfont/material-icons-two-tone.woff"],"node_modules/material-icons/iconfont/material-icons-two-tone.woff"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {};
@@ -4574,6 +4586,8 @@ module.exports = zxcvbn;
 "use strict";
 
 require("bulma/css/bulma.css");
+require("./node_modules/bulma-tooltip/dist/css/bulma-tooltip.min.css");
+require("material-icons/iconfont/material-icons.css");
 var _jsSha = _interopRequireDefault(require("./node_modules/js-sha256"));
 var _zxcvbn = _interopRequireDefault(require("./node_modules/zxcvbn"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -4585,11 +4599,13 @@ function generate() {
   var passwordField = document.getElementById("passwordField");
   var timeToCrackField = document.getElementById("timeToCrack");
   var passwordScoreBar = document.getElementById("passwordScoreBar");
+  var passwordScoreBarDiv = document.getElementById("passwordScoreBarDiv");
   var result = _jsSha.default.hmac(website, key);
   var resultFormatted = result.slice(0, length);
   var data = (0, _zxcvbn.default)(resultFormatted);
   passwordField.innerHTML = resultFormatted;
   passwordScoreBar.value = data.score;
+  passwordScoreBarDiv.setAttribute('data-tooltip', data.score + '/4');
   if (data.score == 1) {
     passwordScoreBar.className = "progress is-danger";
   } else if (data.score == 2) {
@@ -4601,7 +4617,7 @@ function generate() {
   }
   timeToCrackField.innerHTML = data.crack_times_display.offline_slow_hashing_1e4_per_second;
 }
-},{"bulma/css/bulma.css":"node_modules/bulma/css/bulma.css","./node_modules/js-sha256":"node_modules/js-sha256/src/sha256.js","./node_modules/zxcvbn":"node_modules/zxcvbn/lib/main.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"bulma/css/bulma.css":"node_modules/bulma/css/bulma.css","./node_modules/bulma-tooltip/dist/css/bulma-tooltip.min.css":"node_modules/bulma-tooltip/dist/css/bulma-tooltip.min.css","material-icons/iconfont/material-icons.css":"node_modules/material-icons/iconfont/material-icons.css","./node_modules/js-sha256":"node_modules/js-sha256/src/sha256.js","./node_modules/zxcvbn":"node_modules/zxcvbn/lib/main.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -4626,7 +4642,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34017" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42591" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

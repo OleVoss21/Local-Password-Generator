@@ -34,11 +34,13 @@
             <p id="passwordField">Your password will appear here.</p>
           </div>
           <div class="tile is-child box">
-            <p class="title is-size-4">Password strength:</p>
-            <div class="columns">
+            <p class="title is-size-4">Password strength: <a href="https://dropbox.tech/security/zxcvbn-realistic-password-strength-estimation" target="_blank"><span id="passwordStrengthInfo" class="material-icons-outlined has-tooltip-bottom" data-tooltip="We use a tool called 'zxcvbn' to calculate the password score.">info</span></a></p>
+            <div class="columns mt-1">
               <div class="column mr-3">
                 <p class="title is-size-6 mb-2">Score:</p>
-                <progress class="progress is-danger" id="passwordScoreBar" value="0" max="4"></progress>
+                <div id="passwordScoreBarDiv" class="has-tooltip-bottom" data-tooltip="">
+                  <progress class="progress is-danger" id="passwordScoreBar" value="0" max="4"></progress>
+                </div>
               </div>
               <div class="column ml-3">
                 <p class="title is-size-6 mb-1">Time to crack:</p>
