@@ -4606,6 +4606,7 @@ function generate() {
   passwordField.innerHTML = resultFormatted;
   passwordScoreBar.value = data.score;
   passwordScoreBarDiv.setAttribute('data-tooltip', data.score + '/4');
+  timeToCrackField.innerHTML = data.crack_times_display.offline_slow_hashing_1e4_per_second;
   if (data.score == 1) {
     passwordScoreBar.className = "progress is-danger";
   } else if (data.score == 2) {
@@ -4615,7 +4616,6 @@ function generate() {
   } else if (data.score == 4) {
     passwordScoreBar.className = "progress is-success";
   }
-  timeToCrackField.innerHTML = data.crack_times_display.offline_slow_hashing_1e4_per_second;
 }
 },{"bulma/css/bulma.css":"node_modules/bulma/css/bulma.css","./node_modules/bulma-tooltip/dist/css/bulma-tooltip.min.css":"node_modules/bulma-tooltip/dist/css/bulma-tooltip.min.css","material-icons/iconfont/material-icons.css":"node_modules/material-icons/iconfont/material-icons.css","./node_modules/js-sha256":"node_modules/js-sha256/src/sha256.js","./node_modules/zxcvbn":"node_modules/zxcvbn/lib/main.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -4642,7 +4642,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42591" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43757" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

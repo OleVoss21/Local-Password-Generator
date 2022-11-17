@@ -23,6 +23,8 @@ function generate(){
     passwordField.innerHTML = resultFormatted
     passwordScoreBar.value = data.score;
     passwordScoreBarDiv.setAttribute('data-tooltip', data.score + '/4');
+    timeToCrackField.innerHTML = data.crack_times_display.offline_slow_hashing_1e4_per_second;
+
     if (data.score == 1){
         passwordScoreBar.className = "progress is-danger";
     }
@@ -35,5 +37,4 @@ function generate(){
     else if (data.score == 4){
         passwordScoreBar.className = "progress is-success";
     }
-    timeToCrackField.innerHTML = data.crack_times_display.offline_slow_hashing_1e4_per_second;
 }
