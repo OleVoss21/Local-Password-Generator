@@ -4,7 +4,7 @@ import 'material-icons/iconfont/material-icons.css';
 import sha256 from './node_modules/js-sha256';
 import zxcvbn from './node_modules/zxcvbn';
 
-document.getElementById ("generate").addEventListener ("click", generate, false);
+document.getElementById("generate").addEventListener("click", generate, false);
 
 function generate(){
     //init parser
