@@ -7,9 +7,6 @@ import zxcvbn from './node_modules/zxcvbn';
 document.getElementById("generate").addEventListener("click", generate, false);
 
 function generate(){
-    //init parser
-    var parser = document.createElement("a");
-
     var website = document.getElementById("website").value;
     var key = document.getElementById("key").value;
     var length = document.getElementById("length").value;
@@ -19,6 +16,9 @@ function generate(){
     var passwordScoreBar = document.getElementById("passwordScoreBar");
     var passwordScoreBarDiv = document.getElementById("passwordScoreBarDiv");
     var generatedPasswordFor = document.getElementById("generatedPasswordFor");
+
+    //init parser
+    var parser = document.createElement("a");
 
     //parse URL and extract domain
     parser.href = website;
