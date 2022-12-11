@@ -29,6 +29,8 @@ function generate(){
     //calculate and format hash
     var result = sha256.hmac(website, key);
     var resultFormatted = result.slice(0, length);
+
+    //rate password
     var data = zxcvbn(resultFormatted);
     
     //fill elements with results
