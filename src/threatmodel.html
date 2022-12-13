@@ -32,8 +32,32 @@
     </section>
 
     <section class="section">
-        <h1>Test</h1>
+        <div class="container is-max-desktop">
+            <div class="content">
+                <h1>Threat Model</h1>
+                <p>Our threat model shows the architecture of the system. Based on this, threats to the system or the user are identified and countermeasures are defined.</p>
+                <figure>
+                    <img src="Threat-Model.png">
+                    <figcaption>
+                        Figure 1: Threat Model
+                    </figcaption>
+                </figure>
+                <h2>Description</h2>
+                <p>To be able to use the application, the user must initially have a browser and an Internet connection. With the connection to the web server, the user crosses the first trust boundary, which is the Internet provider. The user then connects to the web server via https. The trust boundary of the web server has to be crossed for this purpose. The web server provides the stored HTML, CSS and Javascript files and delivers them to the user. The user's browser loads them into memory and executes them locally.</p>
+                <h2>Threats</h2>
+                <h3>Denial of Service</h3>
+                <p>The application could become the target of a DDOS attack. As a result, accessibility is not guaranteed. Depends on the availability of the Internet on the side of the user and the server. Availability varies depending on the host system.</p>
+                <h3>Tampering</h3>
+                <p>Manipulation of the web server by an attacker, so that incorrect files are provided or changed. Can lead to information disclosure.</p>
+                <h3>Mitigations</h3>
+                <ul>
+                    <li>the web server should be protected against attacks as best as possible.</li>
+                    <li>ensure availability through DDOS protection and backup line.</li>
+                    <li>offline functionality of the web application, thus not dependent on the internet connection.</li>
+                    <li>ensure integrity of the application by hashing, so that the user can verify integrity himself.</li>
+                </ul>
+            </div>
+        </div>
     </section>
-
   </body>
 </html>
