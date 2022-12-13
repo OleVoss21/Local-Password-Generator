@@ -1,0 +1,6 @@
+# Local-Password-Generator
+## src hashes for current version
+48b77d74d353f4aecab2f04b61f677aceef236a212c7868c962608c9b89182ef  src/index.html
+88e9705783b1913708697b5466f6623db9bc3eda937c0da35db4d7f95108d441  src/index.js
+c1d7550968d09023aa8ec253059b877ff16f914e10c67622441f317cf8b48f40  src/threatmodel.html
+64c252e66e68d4ccd491f8a26632b1f5f491b4117d09dfd41a2c66197f60bcd8  src/Threat-Model.png
