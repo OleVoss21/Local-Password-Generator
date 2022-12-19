@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Password Generator</title>
+    <script src="/index.975ef6c8.js" defer=""></script> 
+    <link rel="stylesheet" href="/index.a346f087.css">
+    <link rel="stylesheet" href="/index.bf035ca2.css">
+    <link rel="stylesheet" href="/index.6c6e61f3.css">
+  </head>
+  <body>
+    
+    <section class="section box p-5 mb-1">
+      <nav class="level">
+        <p class="level-item has-text-centered">
+          <a class="link is-info" href="/index.html">Home</a>
+        </p>
+        <p class="level-item has-text-centered">
+          <a class="link is-info" href="/threatmodel.html">Threat Model</a>
+        </p>
+        <p class="level-item has-text-centered is-size-3">
+          Password Generator
+        </p>
+        <p class="level-item has-text-centered">
+          <a class="link is-info" href="https://github.com/OleVoss21/Local-Password-Generator" target="_blank">Source Code</a>
+        </p>
+        <p class="level-item has-text-centered">
+          <a class="link is-info">Contact</a>
+        </p>
+      </nav>
+    </section>
+
+    <section class="section">
+      <div class="tile is-ancestor">
+        <div class="tile is-parent">
+          <div class="tile is-child box">
+            <p class="title">Password Generator</p>
+            <div class="container mb-2">
+              <input class="input" type="text" placeholder="Website URL" id="website">
+            </div>
+            <div class="container mb-2">
+              <input class="input" type="password" placeholder="Master Key" id="key">
+            </div>
+            <div class="container mb-5">
+              <input class="input" type="text" placeholder="Password Length" id="length">
+            </div>
+            <div class="container">
+              <button class="button is-primary" id="generate">Generate</button>
+            </div>
+          </div>
+        </div>
+        <div class="tile is-4 is-vertical is-parent">
+          <div class="tile is-child box">
+            <p class="title is-size-4" id="generatedPasswordFor">Generated password:</p>
+            <p id="passwordField">Your password will appear here.</p>
+          </div>
+          <div class="tile is-child box">
+            <p class="title is-size-4">Password strength: <a href="https://dropbox.tech/security/zxcvbn-realistic-password-strength-estimation" target="_blank" style="color: inherit"><span id="passwordStrengthInfo" class="material-icons-outlined has-tooltip-bottom" data-tooltip="We use a tool called 'zxcvbn' to calculate the password score. Click for more Information.">info</span></a></p>
+            <div class="columns mt-1">
+              <div class="column mr-3">
+                <p class="title is-size-6 mb-2">Score:</p>
+                <div id="passwordScoreBarDiv" class="has-tooltip-bottom" data-tooltip="">
+                  <progress class="progress is-danger" id="passwordScoreBar" value="0" max="4"></progress>
+                </div>
+              </div>
+              <div class="column ml-3">
+                <p class="title is-size-6 mb-1">Time to crack:</p>
+                <p id="timeToCrack"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </body>
+</html>
