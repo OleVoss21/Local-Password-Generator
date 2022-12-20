@@ -2,6 +2,16 @@ import sha256 from '../node_modules/js-sha256';
 import zxcvbn from '../node_modules/zxcvbn';
 
 document.getElementById("generate").addEventListener("click", generate, false);
+document.getElementById("showPassword").addEventListener("change", showPassword, false);
+
+function showPassword(){
+    var keyField = document.getElementById("key");
+    if (keyField.type === "password") {
+        keyField.type = "text";
+    } else {
+        keyField.type = "password";
+    }
+}
 
 function generate(){
     var website = document.getElementById("website").value;

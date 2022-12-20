@@ -43,6 +43,12 @@
             <div class="container mb-2">
               <input class="input" type="password" placeholder="Master Key" id="key">
             </div>
+            <div class="container mb-2 ml-3">
+              <label class="checkbox">
+                <input type="checkbox" id="showPassword">
+                  Show Password
+              </label>
+            </div>
             <div class="container mb-5">
               <input class="input" type="text" placeholder="Password Length" id="length">
             </div>
@@ -52,9 +58,9 @@
           </div>
         </div>
         <div class="tile is-4 is-vertical is-parent">
-          <div class="tile is-child box">
+          <div class="tile is-child box" style="word-wrap: break-word">
             <p class="title is-size-4" id="generatedPasswordFor">Generated password:</p>
-            <p id="passwordField">Your password will appear here.</p>
+            <p id="passwordField" >Your password will appear here.</p>
           </div>
           <div class="tile is-child box">
             <p class="title is-size-4">Password strength: <a href="https://dropbox.tech/security/zxcvbn-realistic-password-strength-estimation" target="_blank" style="color: inherit;"><span id="passwordStrengthInfo" class="material-icons-outlined has-tooltip-bottom" data-tooltip="We use a tool called 'zxcvbn' to calculate the password score. Click for more Information.">info</span></a></p>
