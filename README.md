@@ -1,11 +1,6 @@
 # Local-Password-Generator
 ## src sha256 hashes for current version
-48b77d74d353f4aecab2f04b61f677aceef236a212c7868c962608c9b89182ef  src/index.html
-88e9705783b1913708697b5466f6623db9bc3eda937c0da35db4d7f95108d441  src/index.js
+aa1b074ed6c1f85c0287d457f1fde63f9f951eefcd3e81d132f44e2000d5ae7e  src/index.html
+cc1382014a7efac3db13d708b1c1a5e44a1e8e9000b2511f4ad809cf0a34a677  src/index.js
 c1d7550968d09023aa8ec253059b877ff16f914e10c67622441f317cf8b48f40  src/threatmodel.html
 64c252e66e68d4ccd491f8a26632b1f5f491b4117d09dfd41a2c66197f60bcd8  src/Threat-Model.png
-## dist sha256 hashes for current version
-e673c01f3b66a11d8afaac9ac0fd969e73f7dd15fb64c826d39d79152d23da4f  index.6c6e61f3.css
-36b42f8c2716765223c8b07e632f8385708f27eac28145ef30ebed79b6e2711b  index.975ef6c8.js
-a1f0a1cc2cbfb8cfbcb2a8ba0416cca5efe06f07178371ac3aac8c92ba43deed  index.a346f087.css
-fb3c4610a15d759ac2b1f1985a4b0ca64deb22aade7d557cddb79c01c42ddf8b  index.bf035ca2.css
